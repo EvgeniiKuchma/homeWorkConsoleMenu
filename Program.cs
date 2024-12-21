@@ -6,7 +6,13 @@ namespace homeWorkConsoleMenu
     {
         static void Main(string[] args)
         {
-            int inputUser;
+            const string commandConsoleEnterName = "1";
+            const string commandConsoleEnterAge = "2";
+            const string commandConsoleShowNumber = "3";
+            const string commandConsoleClearConsole = "4";
+            const string commandConsoleExit = "5";
+
+            string inputUser;
             bool toExit = true;
 
             while (toExit)
@@ -18,30 +24,30 @@ namespace homeWorkConsoleMenu
                 Console.WriteLine("4. Clear console;");
                 Console.WriteLine("5. Exit to the programm;");
 
-                inputUser = Convert.ToInt32(Console.ReadLine());
+                inputUser = Console.ReadLine();
 
                 switch (inputUser)
                 {
-                    case 1:
+                    case commandConsoleEnterName:
                         Console.Write("Enter your name please: ");
                         string name = Console.ReadLine();
                         Console.WriteLine($"Your name is {name}");
                         break;
-                    case 2:
+                    case commandConsoleEnterAge:
                         Console.Write("Enter your age please: ");
                         string age = Console.ReadLine();
                         Console.WriteLine($"Your age is {age}");
                         break;
-                    case 3:
+                    case commandConsoleShowNumber:
                         int minValue = -100;
                         int maxValue = 100;
                         Random random = new Random();
                         Console.WriteLine(random.Next(minValue, maxValue));
                         break;
-                    case 4:
+                    case commandConsoleClearConsole:
                         Console.Clear();
                         break;
-                    case 5:
+                    case commandConsoleExit:
                         toExit = false;
                         break;
                 }
