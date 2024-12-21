@@ -6,11 +6,11 @@ namespace homeWorkConsoleMenu
     {
         static void Main(string[] args)
         {
-            const string commandConsoleEnterName = "1";
-            const string commandConsoleEnterAge = "2";
-            const string commandConsoleShowNumber = "3";
-            const string commandConsoleClearConsole = "4";
-            const string commandConsoleExit = "5";
+            const string СommandConsoleEnterName = "1";
+            const string СommandConsoleEnterAge = "2";
+            const string СommandConsoleShowNumber = "3";
+            const string СommandConsoleClearConsole = "4";
+            const string СommandConsoleExit = "5";
 
             string inputUser;
             bool toExit = true;
@@ -18,36 +18,36 @@ namespace homeWorkConsoleMenu
             while (toExit)
             {
                 Console.WriteLine("Choose menu item: ");
-                Console.WriteLine("1. Enter your name;");
-                Console.WriteLine("2. Enter your age;");
-                Console.WriteLine("3. Show me random number;");
-                Console.WriteLine("4. Clear console;");
-                Console.WriteLine("5. Exit to the programm;");
+                Console.WriteLine($"{СommandConsoleEnterName}. Enter your name;");
+                Console.WriteLine($"{СommandConsoleEnterAge}. Enter your age;");
+                Console.WriteLine($"{СommandConsoleShowNumber}. Show me random number;");
+                Console.WriteLine($"{СommandConsoleClearConsole}. Clear console;");
+                Console.WriteLine($"{СommandConsoleExit}. Exit to the programm;");
 
                 inputUser = Console.ReadLine();
 
                 switch (inputUser)
                 {
-                    case commandConsoleEnterName:
+                    case СommandConsoleEnterName:
                         Console.Write("Enter your name please: ");
                         string name = Console.ReadLine();
                         Console.WriteLine($"Your name is {name}");
                         break;
-                    case commandConsoleEnterAge:
+                    case СommandConsoleEnterAge:
                         Console.Write("Enter your age please: ");
                         string age = Console.ReadLine();
                         Console.WriteLine($"Your age is {age}");
                         break;
-                    case commandConsoleShowNumber:
+                    case СommandConsoleShowNumber:
                         int minValue = -100;
                         int maxValue = 100;
                         Random random = new Random();
                         Console.WriteLine(random.Next(minValue, maxValue));
                         break;
-                    case commandConsoleClearConsole:
+                    case СommandConsoleClearConsole:
                         Console.Clear();
                         break;
-                    case commandConsoleExit:
+                    case СommandConsoleExit:
                         toExit = false;
                         break;
                 }
